@@ -33,7 +33,7 @@ public class Main {
 
                 if (accounts.containsKey(accNum) && accounts.get(accNum).equals(pin)) {
                     loggedIn = true;
-                    currentUser = accNum;
+                    user1 = accNum;
                     System.out.println("Login successful.");
                 } else {
                     System.out.println("Wrong credentials. Please try again.");
@@ -48,20 +48,20 @@ public class Main {
                     String choice2 = scanner.nextLine();
 
                     if (choice2.equals("1")) {
-                        System.out.println("Current Balance: $" + balances.get(currentUser));
+                        System.out.println("Current Balance: $" + balances.get(user1));
                     } 
                     else if (choice2.equals("2")) {
                         System.out.print("Enter amount to deposit: ");
                         double deposit = scanner.nextDouble();
-                        balances.put(currentUser, balances.get(currentUser) + deposit);
+                        balances.put(user1, balances.get(user1) + deposit);
                         System.out.println("$" + deposit + " deposited successfully");
                         scanner.nextLine();
                     } 
                     else if (choice2.equals("3")) {
                         System.out.print("Enter amount to withdraw: ");
                         double withdraw = scanner.nextDouble();
-                        if (withdraw <= balances.get(currentUser)) {
-                            balances.put(currentUser, balances.get(currentUser) - withdraw);
+                        if (withdraw <= balances.get(user1)) {
+                            balances.put(user1, balances.get(user1) - withdraw);
                             System.out.println("$" + withdraw + " withdrawn successfully.");
                         } else {
                             System.out.println("Insufficient funds.");
