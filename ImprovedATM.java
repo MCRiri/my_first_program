@@ -10,7 +10,8 @@ public class Main {
         String user1 = "";
 
         while (true) {
-            System.out.println("\n1. Register");
+            System.out.println(" ");
+            System.out.println("1. Register");
             System.out.println("2. Login");
             System.out.println("3. Exit");
             System.out.print("Enter choice: ");
@@ -40,7 +41,8 @@ public class Main {
                 }
 
                 while (loggedIn) {
-                    System.out.println("\n1. Check Balance");
+                    System.out.println(" ");
+                    System.out.println("1. Check Balance");
                     System.out.println("2. Deposit");
                     System.out.println("3. Withdraw");
                     System.out.println("4. Logout");
